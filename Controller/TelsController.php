@@ -7,10 +7,17 @@ class TelsController extends AppController
 	
 	public function index()
 	{
-		$this->set('role', 'Пользователь'); 
-		$this->set('tels', $this->Tel->find('all'));
-		//$nets = $this->Net->find('all');
-		//debug($nets);
+		$user=$this->Auth->user();
+		
+		if($user['role'] === 'user'){
+			$this->set('tels', $this->Tel->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
+		}
+		if($user['role'] === 'admin'){
+			$this->set('tels', $this->Tel->find('all'));
+		}
+		if($user['role'] === 'account'){
+			$this->set('tels', $this->Tel->find('all'));
+		}
 	}
 
 	public function edit ($id = null){

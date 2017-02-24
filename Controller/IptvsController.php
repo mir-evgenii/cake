@@ -7,10 +7,17 @@ class IptvsController extends AppController
 	
 	public function index()
 	{
-		$this->set('role', 'Пользователь'); 
-		$this->set('iptvs', $this->Iptv->find('all'));
-		//$nets = $this->Net->find('all');
-		//debug($nets);
+		$user=$this->Auth->user();
+		
+		if($user['role'] === 'user'){
+			$this->set('iptvs', $this->Iptv->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
+		}
+		if($user['role'] === 'admin'){
+			$this->set('iptvs', $this->Iptv->find('all'));
+		}
+		if($user['role'] === 'account'){
+			$this->set('iptvs', $this->Iptv->find('all'));
+		}
 	}
 
 	public function edit ($id = null){

@@ -7,10 +7,17 @@ class VideosController extends AppController
 	
 	public function index()
 	{
-		$this->set('role', 'Пользователь'); 
-		$this->set('videos', $this->Video->find('all'));
-		//$nets = $this->Net->find('all');
-		//debug($nets);
+		$user=$this->Auth->user();
+		
+		if($user['role'] === 'user'){
+			$this->set('videos', $this->Video->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
+		}
+		if($user['role'] === 'admin'){
+			$this->set('videos', $this->Video->find('all'));
+		}
+		if($user['role'] === 'account'){
+			$this->set('videos', $this->Video->find('all'));
+		}
 	}
 
 	public function edit ($id = null){

@@ -13,10 +13,18 @@ class NetsController extends AppController
 	
 	public function index()
 	{
-		$this->set('role', 'Пользователь'); 
-		$this->set('nets', $this->Net->find('all'));
-		//$nets = $this->Net->find('all');
-		//debug($nets);
+		$user=$this->Auth->user();
+		
+		if($user['role'] === 'user'){
+			$this->set('nets', $this->Net->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
+		}
+		if($user['role'] === 'admin'){
+			$this->set('nets', $this->Net->find('all'));
+		}
+		if($user['role'] === 'account'){
+			$this->set('nets', $this->Net->find('all'));
+		}
+		
 	}
 
 	public function edit ($id = null){
