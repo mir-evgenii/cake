@@ -4,6 +4,8 @@
 */
 class NetsController extends AppController
 {
+	public $uses = ['Net', 'User'];
+
 	public function isAuthorized($user = null){
 		if($this->action === 'edit' && $user['role'] === 'user'){
 			return false;
@@ -19,10 +21,30 @@ class NetsController extends AppController
 			$this->set('nets', $this->Net->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
 		}
 		if($user['role'] === 'admin'){
-			$this->set('nets', $this->Net->find('all'));
+			/*$this->set('nets', $this->Net->find('all'));
+			$this->set('users', $this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
+			$net_arr=($this->Net->find('all'));
+			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$result = count($user_arr);
+			$nets_users = array();
+			for ($nom = 0; $nom <= $result; array_push($nets_users, $net_user), $nom++) {
+				$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
+			}
+			$nets_users1 = array_diff($nets_users, array(''));
+			$this->set('nets', $nets_users1);
+			/*$result = count($user_arr);
+			debug($result);
+			$nom=0;
+			debug($net_arr[$nom]['Net']);
+			debug($user_arr[$nom]['User']);
+
+			$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
+			debug($net_user);*/
+
 		}
 		if($user['role'] === 'account'){
 			$this->set('nets', $this->Net->find('all'));
+			$this->set('users', $this->User->find('all',  array('conditions' => array('role' => 'user'))));
 		}
 		
 	}

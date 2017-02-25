@@ -4,6 +4,7 @@
 <table>
 <tr>
 <th>Id</th>
+<th>Имя</th>
 <th>Тариф</th>
 <th>Счет</th>
 <th>Чек</th>
@@ -11,11 +12,12 @@
 </tr>
 <?php foreach ($nets as $net) : ?>
 <tr>
-<td><?= $net['Net']['id'] ?></td>
-<td><?= $net['Net']['tariff'] ?></td>
-<td><?= $net['Net']['bill'] ?></td>
-<td><?= $net['Net']['chek'] ?></td>
-<td><?= $this->Html->link('Изменить', ['action' => 'edit', $net['Net']['id']]) ?></td>
+<td><?= $net['id'] ?></td>
+<td><?= $net['username'] ?></td>
+<td><?= $net['tariff'] ?></td>
+<td><?= $net['bill'] ?></td>
+<td><?= $net['chek'] ?></td>
+<td><?= $this->Html->link('Изменить', ['action' => 'edit', $net['id']]) ?></td>
 </tr>
 <?php endforeach;?>
 </table>
