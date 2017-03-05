@@ -1,8 +1,13 @@
 <div class="content1">
+
 <?php if(is_array($videos)) : ?>
+
 <table>
 <tr>
 <th>Id</th>
+<th>Имя</th>
+<th>Телефон</th>
+<th>Адрес</th>
 <th>Тариф</th>
 <th>Счет</th>
 <th>Чек</th>
@@ -10,11 +15,14 @@
 </tr>
 <?php foreach ($videos as $video) : ?>
 <tr>
-<td><?= $video['Video']['id'] ?></td>
-<td><?= $video['Video']['tariff'] ?></td>
-<td><?= $video['Video']['bill'] ?></td>
-<td><?= $video['Video']['chek'] ?></td>
-<td><?= $this->Html->link('Изменить', ['action' => 'edit', $video['Video']['id']]) ?></td>
+<td><?= $video['id'] ?></td>
+<td><?= $video['username'] ?></td>
+<td><?= $video['phone'] ?></td>
+<td><?= $video['address'] ?></td>
+<td><?= $video['tariff'] ?></td>
+<td><?= $video['bill'] ?></td>
+<td><?= $video['chek'] ?></td>
+<td><?= $this->Html->link('Изменить', ['action' => 'edit', $video['id']]) ?></td>
 </tr>
 <?php endforeach;?>
 </table>

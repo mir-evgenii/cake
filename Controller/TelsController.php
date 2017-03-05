@@ -4,6 +4,7 @@
 */
 class TelsController extends AppController
 {
+	public $uses = ['Tel', 'User'];
 	
 	public function index()
 	{
@@ -13,10 +14,32 @@ class TelsController extends AppController
 			$this->set('tels', $this->Tel->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
 		}
 		if($user['role'] === 'admin'){
-			$this->set('tels', $this->Tel->find('all'));
+			/*$this->set('tels', $this->Tel->find('all'));*/
+
+			$tel_arr=($this->Tel->find('all'));
+			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$result = count($user_arr);
+			$tels_users = array();
+			for ($nom = 0; $nom <= $result; array_push($tels_users, $tel_user), $nom++) {
+				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
+				$tel_user=($tel_arr[$nom]['Tel'])+($user_arr[$nom]['User']);
+			}
+			$tels_users1 = array_diff($tels_users, array(''));
+			$this->set('tels', $tels_users1);
 		}
 		if($user['role'] === 'account'){
-			$this->set('tels', $this->Tel->find('all'));
+			/*$this->set('tels', $this->Tel->find('all'));*/
+
+			$tel_arr=($this->Tel->find('all'));
+			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$result = count($user_arr);
+			$tels_users = array();
+			for ($nom = 0; $nom <= $result; array_push($tels_users, $tel_user), $nom++) {
+				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
+				$tel_user=($tel_arr[$nom]['Tel'])+($user_arr[$nom]['User']);
+			}
+			$tels_users1 = array_diff($tels_users, array(''));
+			$this->set('tels', $tels_users1);
 		}
 	}
 
