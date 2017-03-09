@@ -27,12 +27,12 @@ class NetsController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$nets_users = array();
-			for ($nom = 0; $nom <= $result; array_push($nets_users, $net_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($nets_users, $net_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
 			}
-			$nets_users1 = array_diff($nets_users, array(''));
-			$this->set('nets', $nets_users1);
+			/*$nets_users1 = array_diff($nets_users, array(''));*/
+			$this->set('nets', $nets_users);
 			/*$result = count($user_arr);
 			debug($result);
 			$nom=0;
@@ -48,12 +48,12 @@ class NetsController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$nets_users = array();
-			for ($nom = 0; $nom <= $result; array_push($nets_users, $net_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($nets_users, $net_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
 			}
-			$nets_users1 = array_diff($nets_users, array(''));
-			$this->set('nets', $nets_users1);
+			/*$nets_users1 = array_diff($nets_users, array(''));*/
+			$this->set('nets', $nets_users);
 		}
 		
 	}

@@ -20,12 +20,12 @@ class VideosController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$videos_users = array();
-			for ($nom = 0; $nom <= $result; array_push($videos_users, $video_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($videos_users, $video_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$video_user=($video_arr[$nom]['Video'])+($user_arr[$nom]['User']);
 			}
-			$videos_users1 = array_diff($videos_users, array(''));
-			$this->set('videos', $videos_users1);
+			/*$videos_users1 = array_diff($videos_users, array(''));*/
+			$this->set('videos', $videos_users);
 		}
 		if($user['role'] === 'account'){
 			// $this->set('videos', $this->Video->find('all'));
@@ -34,12 +34,12 @@ class VideosController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$videos_users = array();
-			for ($nom = 0; $nom <= $result; array_push($videos_users, $video_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($videos_users, $video_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$video_user=($video_arr[$nom]['Video'])+($user_arr[$nom]['User']);
 			}
-			$videos_users1 = array_diff($videos_users, array(''));
-			$this->set('videos', $videos_users1);
+			/*$videos_users1 = array_diff($videos_users, array(''));*/
+			$this->set('videos', $videos_users);
 		}
 	}
 

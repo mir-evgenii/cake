@@ -4,6 +4,7 @@
 */
 class BidsController extends AppController
 {
+	public $uses = ['Bid', 'User'];
 
 	/*public function isAuthorized($user = null){
 		if($this->action === 'add'){
@@ -59,7 +60,35 @@ class BidsController extends AppController
 
 		if($user['role'] === 'admin'){
 			
-			$this->set('bids', $this->Bid->find('all'));
+			/*$this->set('bids', $this->Bid->find('all'));*/
+			$bid_arr=($this->Bid->find('all'));
+			$tip=1;
+			$bid_arr1=($this->Bid->find('all',  array('conditions' => array('user_id' => $tip))));
+			debug($bid_arr); 
+			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			debug($user_arr);
+			debug($bid_arr1);
+		/*	$result = count($user_arr);
+			$bids_users = array();
+			for ($nom = 0; $nom < $result; array_push($bids_users, $bid_user), $nom++) {
+				$user_arr[$nom]['User'];
+				$res = count($bid_arr[$nom]['Bid']);
+				for ($om = 0; $om < $result; array_push($bids_users, $bid_user), $om++) {
+				$bid_arr[$nom]['Bid']
+				}
+
+			}
+
+
+
+			$result = count($user_arr);
+			$bids_users = array();
+			for ($nom = 0; $nom < $result; array_push($bids_users, $bid_user), $nom++) {
+				$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);
+				$bid_user=($bid_arr[$nom]['Bid'])+($user_arr[$nom]['User']);
+			}
+			$bids_users1 = array_diff($bids_users, array(''));
+			$this->set('bids', $bids_users1);*/
 
 		}else{
 			return false;

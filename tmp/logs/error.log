@@ -1090,3 +1090,303 @@ Stack Trace:
 #3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2017-03-09 20:01:01 Error: Fatal Error (1): Call to a member function error() on null in [C:\xampp\htdocs\cake\app\Controller\UsersController.php, line 45]
+2017-03-09 20:01:01 Error: [FatalErrorException] Call to a member function error() on null
+Request URL: /cake/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 45, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 45, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 20:11:27 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 70]
+2017-03-09 20:11:27 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 20:11:35 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 70]
+2017-03-09 20:11:35 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 20:12:44 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 70]
+2017-03-09 20:12:44 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 20:17:24 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 70]
+2017-03-09 20:17:24 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 20:19:16 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 70]
+2017-03-09 20:19:16 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 70, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 20:25:08 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 72]
+2017-03-09 20:25:08 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 72)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 72, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 72, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:17:34 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 72]
+2017-03-09 21:17:34 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 72)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 72, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 72, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:44:03 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:44:03 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:44:05 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:44:05 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:44:08 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:44:08 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:45:11 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:45:11 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:45:13 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:45:13 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:45:13 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:45:13 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:45:16 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 76]
+2017-03-09 21:45:16 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 76, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:45:24 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 91]
+2017-03-09 21:45:24 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION)
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:45:26 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 91]
+2017-03-09 21:45:26 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION)
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 91, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:47:10 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:47:10 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:47:13 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:47:13 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:47:23 Error: Fatal Error (4): syntax error, unexpected '*', expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:47:23 Error: [FatalErrorException] syntax error, unexpected '*', expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:47:24 Error: Fatal Error (4): syntax error, unexpected '*', expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:47:24 Error: [FatalErrorException] syntax error, unexpected '*', expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:47:25 Error: Fatal Error (4): syntax error, unexpected '*', expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:47:25 Error: [FatalErrorException] syntax error, unexpected '*', expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:47:41 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:47:41 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:48:13 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:48:13 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:48:14 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:48:14 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:48:27 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:48:27 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:48:28 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:48:28 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:49:10 Error: Fatal Error (4): syntax error, unexpected '=', expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:49:10 Error: [FatalErrorException] syntax error, unexpected '=', expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:49:11 Error: Fatal Error (4): syntax error, unexpected '=', expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:49:11 Error: [FatalErrorException] syntax error, unexpected '=', expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-09 21:49:11 Error: Fatal Error (4): syntax error, unexpected '=', expecting ']' in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 68]
+2017-03-09 21:49:11 Error: [FatalErrorException] syntax error, unexpected '=', expecting ']'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 68, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

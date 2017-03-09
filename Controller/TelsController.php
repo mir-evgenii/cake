@@ -20,12 +20,12 @@ class TelsController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$tels_users = array();
-			for ($nom = 0; $nom <= $result; array_push($tels_users, $tel_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($tels_users, $tel_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$tel_user=($tel_arr[$nom]['Tel'])+($user_arr[$nom]['User']);
 			}
-			$tels_users1 = array_diff($tels_users, array(''));
-			$this->set('tels', $tels_users1);
+			/*$tels_users1 = array_diff($tels_users, array(''));*/
+			$this->set('tels', $tels_users);
 		}
 		if($user['role'] === 'account'){
 			/*$this->set('tels', $this->Tel->find('all'));*/
@@ -34,12 +34,12 @@ class TelsController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$tels_users = array();
-			for ($nom = 0; $nom <= $result; array_push($tels_users, $tel_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($tels_users, $tel_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$tel_user=($tel_arr[$nom]['Tel'])+($user_arr[$nom]['User']);
 			}
-			$tels_users1 = array_diff($tels_users, array(''));
-			$this->set('tels', $tels_users1);
+			/*$tels_users1 = array_diff($tels_users, array(''));*/
+			$this->set('tels', $tels_users);
 		}
 	}
 

@@ -20,12 +20,12 @@ class IptvsController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$iptvs_users = array();
-			for ($nom = 0; $nom <= $result; array_push($iptvs_users, $iptv_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($iptvs_users, $iptv_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$iptv_user=($iptv_arr[$nom]['Iptv'])+($user_arr[$nom]['User']);
 			}
-			$iptvs_users1 = array_diff($iptvs_users, array(''));
-			$this->set('iptvs', $iptvs_users1);
+			/*$iptvs_users1 = array_diff($iptvs_users, array(''));*/
+			$this->set('iptvs', $iptvs_users);
 		}
 		if($user['role'] === 'account'){
 			/*$this->set('iptvs', $this->Iptv->find('all'));*/
@@ -34,12 +34,12 @@ class IptvsController extends AppController
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
 			$result = count($user_arr);
 			$iptvs_users = array();
-			for ($nom = 0; $nom <= $result; array_push($iptvs_users, $iptv_user), $nom++) {
+			for ($nom = 0; $nom < $result; array_push($iptvs_users, $iptv_user), $nom++) {
 				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$iptv_user=($iptv_arr[$nom]['Iptv'])+($user_arr[$nom]['User']);
 			}
-			$iptvs_users1 = array_diff($iptvs_users, array(''));
-			$this->set('iptvs', $iptvs_users1);
+			/*$iptvs_users1 = array_diff($iptvs_users, array(''));*/
+			$this->set('iptvs', $iptvs_users);
 		}
 	}
 
