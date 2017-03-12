@@ -15,6 +15,9 @@
 </tr>
 <?php foreach ($bids as $bid) : ?>
 <tr>
+<td><?= $bid['Bid']['username'] ?></td>
+<td><?= $bid['Bid']['address'] ?></td>
+<td><?= $bid['Bid']['phone'] ?></td>
 <td><?= $this->Html->link( $bid['Bid']['text'], ['controller' => 'bids', 'action' => 'view', $bid['Bid']['id'] ] ) ?></td>
 <td><?= $bid['Bid']['created'] ?></td>
 <td><?= $bid['Bid']['modified'] ?></td>
