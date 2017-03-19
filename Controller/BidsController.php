@@ -60,16 +60,8 @@ class BidsController extends AppController
 
 		if($user['role'] === 'admin'){
 			
-			/*$this->set('bids', $this->Bid->find('all'));*/
 			$bid_arr=($this->Bid->find('all'));
 			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
-			/*$user_id = $user_arr['0']['User']['id'];
-			$bid_arr1=($this->Bid->find('all',  array('conditions' => array('user_id' => $user_id))));
-			debug($bid_arr); 
-			
-			debug($user_arr);
-			debug($bid_arr1);
-			debug($user_arr['0']['User']['id']);*/
 			$result = count($user_arr);
 			$bids_users = array();
 
@@ -83,33 +75,23 @@ class BidsController extends AppController
 				$arrs = array();
 
 				for ($om = 0; $om < $res; array_push($arrs, $arr), $om++) {
-					debug($nom);
-					debug($om);
-					debug($user_arr[$nom]['User']);
-					debug($bid_arr1[$om]['Bid']);
 					
 				$arr=($user_arr[$nom]['User'])+($bid_arr1[$om]['Bid']);
-				debug($arr);
-
+				
 				}
-				debug($bid_user);
+			}
 
+			$new_arr = array_diff($bids_users, array('', NULL, null, false));
+			$result = count($new_arr);
+
+			for ($int = 1; $int <= $result; $int++) {
+				foreach ($new_arr[$int] as $arr) { 
+					array_push($arrs, $arr);
+				}
 
 			}
 
-
-			$this->set('bids', $bids_users);
-
-
-
-			/*$result = count($user_arr);
-			$bids_users = array();
-			for ($nom = 0; $nom < $result; array_push($bids_users, $bid_user), $nom++) {
-				$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);
-				$bid_user=($bid_arr[$nom]['Bid'])+($user_arr[$nom]['User']);
-			}
-			$bids_users1 = array_diff($bids_users, array(''));
-			$this->set('bids', $bids_users1);*/
+			$this->set('bids', $arrs);
 
 		}else{
 			return false;

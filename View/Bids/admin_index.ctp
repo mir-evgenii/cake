@@ -1,6 +1,5 @@
 
 <div class="content1">
-<?php debug($bids); ?>
 <?php if(is_array($bids)) : ?>
 <table>
 <tr>
@@ -15,14 +14,14 @@
 </tr>
 <?php foreach ($bids as $bid) : ?>
 <tr>
-<td><?= $bid['Bid']['username'] ?></td>
-<td><?= $bid['Bid']['address'] ?></td>
-<td><?= $bid['Bid']['phone'] ?></td>
-<td><?= $this->Html->link( $bid['Bid']['text'], ['controller' => 'bids', 'action' => 'view', $bid['Bid']['id'] ] ) ?></td>
-<td><?= $bid['Bid']['created'] ?></td>
-<td><?= $bid['Bid']['modified'] ?></td>
-<td><?= $bid['Bid']['status'] ?></td>
-<td><?= $this->Html->link('Изменить', ['action' => 'edit', $bid['Bid']['id']]) ?> | <?php echo $this->Form->postLink('Удалить', array('action' => 'delete', $bid['Bid']['id']),['confirm' => 'Подтвердите удаление']) ?></td>
+<td><?= $bid['username'] ?></td>
+<td><?= $bid['address'] ?></td>
+<td><?= $bid['phone'] ?></td>
+<td><?= $this->Html->link( $bid['text'], ['controller' => 'bids', 'action' => 'view', $bid['id'] ] ) ?></td>
+<td><?= $bid['created'] ?></td>
+<td><?= $bid['modified'] ?></td>
+<td><?= $bid['status'] ?></td>
+<td><?= $this->Html->link('Изменить', ['action' => 'edit', $bid['id']]) ?> | <?php echo $this->Form->postLink('Удалить', array('action' => 'delete', $bid['id']),['confirm' => 'Подтвердите удаление']) ?></td>
 </tr>
 <?php endforeach;?>
 </table>
