@@ -1,11 +1,14 @@
 <h2>Изменение заявки</h2>
 
-<div>
 <?php
-echo $this->Form->create('Bid');
-echo $this->Form->input('text',  ['label' => 'Текст']);
-echo $this->Form->input('status', ['label' => 'Статус', 'options' => ['Не выполнено' => 'Не выполнено', 'Выполнено' => 'Выполнено']]);
-echo $this->Form->input('id');
-echo $this->Form->end('Сохранить');
+if($logged_user['role'] === 'user'){
+	include 'user_edit.ctp';
+}
+if($logged_user['role'] === 'admin'){
+	include 'admin_edit.ctp';
+}
+if($logged_user['role'] === 'thec'){
+	include 'thec_edit.ctp';
+}
+
 ?>
-</div>

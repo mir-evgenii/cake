@@ -8,7 +8,6 @@
 <th>Содержание</th>
 <th>Дата создания</th>
 <th>Дата изменения</th>
-<th>Статус</th>
 <th>Действия</th>
 </tr>
 <?php foreach ($bids as $bid) : ?>
@@ -19,8 +18,7 @@
 <td><?= $this->Html->link( $bid['text'], ['controller' => 'bids', 'action' => 'view', $bid['id'] ] ) ?></td>
 <td><?= $bid['created'] ?></td>
 <td><?= $bid['modified'] ?></td>
-<td><?= $bid['status'] ?></td>
-<td><?= $this->Html->link('Изменить', ['action' => 'edit', $bid['id']]) ?> | <?php echo $this->Form->postLink('Удалить', array('action' => 'delete', $bid['id']),['confirm' => 'Подтвердите удаление']) ?></td>
+<td><?= $this->Html->link('Изменить', ['action' => 'edit', $bid['id']]) ?></td>
 </tr>
 <?php endforeach;?>
 </table>
