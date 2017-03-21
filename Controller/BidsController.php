@@ -53,8 +53,41 @@ class BidsController extends AppController
 
 		if($user['role'] === 'thec'){
 			
-			$data = $this->Bid->find('all', array('conditions' => array('status' => 'Не выполнено')));
-			$this->set('bids', $data);
+			/*$data = $this->Bid->find('all', array('conditions' => array('status' => 'Не выполнено')));
+			$this->set('bids', $data);*/
+
+			$bid_arr=($this->Bid->find('all', array('conditions' => array('status' => 'Не выполнено'))));
+			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$result = count($user_arr);
+			$bids_users = array();
+
+			for ($nom = 0; $nom <= $result; array_push($bids_users, $bid_user), $nom++) {
+
+				$user_id = $user_arr[$nom]['User']['id'];
+				$bid_arr1=($this->Bid->find('all',  array('conditions' => array('user_id' => $user_id, 'status' => 'Не выполнено'))));
+				$res = count($bid_arr1);
+
+				$bid_user = $arrs;
+				$arrs = array();
+
+				for ($om = 0; $om < $res; array_push($arrs, $arr), $om++) {
+					
+				$arr=($user_arr[$nom]['User'])+($bid_arr1[$om]['Bid']);
+				
+				}
+			}
+
+			$new_arr = array_diff($bids_users, array('', NULL, null, false));
+			$result = count($new_arr);
+
+			for ($int = 1; $int <= $result; $int++) {
+				foreach ($new_arr[$int] as $arr) { 
+					array_push($arrs, $arr);
+				}
+
+			}
+
+			$this->set('bids', $arrs);
 
 		}
 

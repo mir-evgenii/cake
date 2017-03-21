@@ -9,8 +9,8 @@ if($logged_user['role'] === 'user'){
 if($logged_user['role'] === 'admin'){
 	include 'admin_index.ctp';
 }
-if($logged_user['role'] === 'tech'){
-	include 'tech_index.ctp';
+if($logged_user['role'] === 'thec'){
+	include 'thec_index.ctp';
 }
 
 ?>

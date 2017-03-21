@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	public $components = array('DebugKit.Toolbar', 'Session', 'Auth' => [
-		'loginRedirect' => ['controller' => 'nets', 'action' => 'index'],
+		'loginRedirect' => ['controller' => 'bids', 'action' => 'index'],
 		'logoutRedirect' => ['controller' => 'nets', 'action' => 'index'],
 		'authenticate' => [
 		'Form' => ['passwordHasher' => 'Blowfish']
