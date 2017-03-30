@@ -1,4 +1,5 @@
 <h2>Интернет</h2>
+<a href="/cake/nets/stat">Статистика</a>
 
 <?php echo $this->element('menu') ?>
 

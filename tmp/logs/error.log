@@ -1530,3 +1530,146 @@ Stack Trace:
 #3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2017-03-26 15:48:42 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cake_dip`.`nets`, CONSTRAINT `nets_ibfk_1` FOREIGN KEY (`net_id`) REFERENCES `users` (`net_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+Request URL: /cake/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `ca...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1012): DboSource->execute('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(1928): DboSource->create(Object(User), Array, Array)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(1751): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\cake\app\Controller\UsersController.php(32): Model->save(Array)
+#6 [internal function]: UsersController->add()
+#7 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2017-03-30 21:48:33 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\TelsController.php, line 25]
+2017-03-30 21:48:33 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/tels
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 21:48:36 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\VideosController.php, line 25]
+2017-03-30 21:48:36 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/videos
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 22:14:48 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\TelsController.php, line 25]
+2017-03-30 22:14:48 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/tels
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 22:39:25 Error: [MissingControllerException] Controller class StatController could not be found.
+Exception Attributes: array (
+  'class' => 'StatController',
+  'plugin' => NULL,
+)
+Request URL: /cake/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-03-30 22:39:51 Error: [MissingControllerException] Controller class StatController could not be found.
+Exception Attributes: array (
+  'class' => 'StatController',
+  'plugin' => NULL,
+)
+Request URL: /cake/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-03-30 22:44:42 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 99]
+2017-03-30 22:44:42 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 99)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 99, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 99, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 22:49:10 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 102]
+2017-03-30 22:49:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 102)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 102, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 102, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 22:49:28 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 103]
+2017-03-30 22:49:28 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 103)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 103, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 103, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 22:49:30 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 103]
+2017-03-30 22:49:30 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 103)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 103, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 103, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 23:34:54 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 7]
+2017-03-30 23:34:54 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 7, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 23:45:35 Error: Fatal Error (4): syntax error, unexpected '=', expecting ',' or ';' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 15]
+2017-03-30 23:45:35 Error: [FatalErrorException] syntax error, unexpected '=', expecting ',' or ';'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 15)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 15, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 15, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 23:52:48 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 9]
+2017-03-30 23:52:48 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-30 23:52:59 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 9]
+2017-03-30 23:52:59 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 9, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 9, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

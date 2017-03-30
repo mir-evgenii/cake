@@ -78,6 +78,32 @@ class NetsController extends AppController
 			$this->request->data = $net;
 		}
 	}
+
+	public function stat (){
+		$user=$this->Auth->user();
+		
+		if($user['role'] === 'admin'){
+			/*$this->set('stat390', $this->Net->find('all', array('conditions' => array('tariff' => 'iFlat 390'))));
+			$this->set('stat490', $this->Net->find('all', array('conditions' => array('tariff' => 'iFlat 490'))));
+			$this->set('stat590', $this->Net->find('all', array('conditions' => array('tariff' => 'iFlat 590'))));
+			$this->set('stat690', $this->Net->find('all', array('conditions' => array('tariff' => 'iFlat 690'))));
+			$this->set('stat790', $this->Net->find('all', array('conditions' => array('tariff' => 'iFlat 590'))));
+			$this->set('stat_null', $this->Net->find('all', array('conditions' => array('tariff' => 'Отключен'))));*/
+
+			$stat_arr = ['iFlat 390', 'iFlat 490', 'iFlat 590', 'iFlat 690', 'iFlat 790','Отключен'];
+			$result = count($stat_arr);
+			$stats = array();
+
+			for ($nom = 0; $nom < $result; array_push($stats, $stat), $nom++) {	
+				$stat = array();
+				$stat = $this->Net->find('all', array('conditions' => array('tariff' => $stat_arr[$nom])));
+
+			}
+
+			$this->set('stats', $stats);
+
+		}
+	}
 }
 
 ?>

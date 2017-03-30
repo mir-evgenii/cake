@@ -4,6 +4,7 @@
 */
 class UsersController extends AppController
 {
+	public $uses = ['Net', 'Tel', 'Video', 'Iptv', 'User'];
 
 	public function isAuthorized($user = null){
 		if($this->action === 'index' && $user['role'] === 'user'){
