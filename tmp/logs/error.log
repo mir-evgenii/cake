@@ -1673,3 +1673,53 @@ Stack Trace:
 #3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2017-03-31 20:56:34 Error: Fatal Error (4): syntax error, unexpected '==' (T_IS_EQUAL) in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 8]
+2017-03-31 20:56:34 Error: [FatalErrorException] syntax error, unexpected '==' (T_IS_EQUAL)
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 20:56:47 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 8]
+2017-03-31 20:56:47 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 20:56:49 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 8]
+2017-03-31 20:56:49 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 21:02:19 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 37]
+2017-03-31 21:02:19 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 37, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 37, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-03-31 22:04:31 Error: Fatal Error (1): Cannot use string offset as an array in [C:\xampp\htdocs\cake\app\View\Nets\stat.ctp, line 10]
+2017-03-31 22:04:31 Error: [FatalErrorException] Cannot use string offset as an array
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Cannot use stri...', 'C:\\xampp\\htdocs...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use stri...', 'C:\\xampp\\htdocs...', 10, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use stri...', 'C:\\xampp\\htdocs...', 10, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

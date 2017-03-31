@@ -2,25 +2,28 @@
 
 <?php
 $result = count($stats);
+debug($stats);
 ?>
 <?php foreach ($stats as $stat) : ?>
-<?php
-if(($stat['0']['Net']['tariff']) == 'null'){
-	$stat['0']['Net']['tariff'] = ' ';
+<?php $result = count($stat); 
+if($result == 'null'){
+	$result = 0;
+	array_push($result_arr, $result);
 }else{
-	return 1;
-} 
+	array_push($result_arr, $result);
+}
+
 ?>
 <ul>
 <li>
-<?php 
-echo $result = count($stat);
-echo $stat['0']['Net']['tariff'];
-
+<?php echo $result;
 ?>
 </li>
 </ul>
-<?php endforeach;?>
+<?php endforeach;
+$st = 78.09;
+?>
+
 
 
 
@@ -34,7 +37,7 @@ echo $stat['0']['Net']['tariff'];
    function drawChart() {
     var data = google.visualization.arrayToDataTable([
      ['Газ', 'Объём'],
-     ['Азот',     78.09],
+     ['Азот',     <?= $st ?>],
      ['Кислород', 20.95],
      ['Аргон',    0.93],
      ['Углекислый газ', 0.03]
