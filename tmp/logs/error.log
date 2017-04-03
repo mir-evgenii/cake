@@ -1769,3 +1769,59 @@ Stack Trace:
 #10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NetsController), Object(CakeRequest))
 #11 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2017-04-03 14:20:20 Error: Fatal Error (1): Unsupported operand types in [C:\xampp\htdocs\cake\app\Controller\TelsController.php, line 25]
+2017-04-03 14:20:20 Error: [FatalErrorException] Unsupported operand types
+Request URL: /cake/tels
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 16:33:57 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\xampp\htdocs\cake\app\Controller\TelsController.php, line 96]
+2017-04-03 16:33:57 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /cake/tels/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 96)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 96, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 96, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 16:34:47 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\xampp\htdocs\cake\app\Controller\TelsController.php, line 95]
+2017-04-03 16:34:47 Error: [FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /cake/tels/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 95)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 95, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 95, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 16:34:48 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\xampp\htdocs\cake\app\Controller\TelsController.php, line 95]
+2017-04-03 16:34:48 Error: [FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /cake/tels/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 95)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 95, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 95, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 16:35:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Net.bill' in 'field list'
+Request URL: /cake/tels/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT sum(`Net...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT sum(`Net...', Array, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT sum(`Net...', false)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Tel), Array)
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\app\Controller\TelsController.php(81): Model->find('all', Array)
+#7 [internal function]: TelsController->stat()
+#8 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TelsController), Array)
+#9 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TelsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

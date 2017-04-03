@@ -63,6 +63,35 @@ class VideosController extends AppController
 			$this->request->data = $video;
 		}
 	}
+
+	public function stat (){
+		$user=$this->Auth->user();
+		
+		if($user['role'] === 'admin'){
+			
+			$stat_arr = ['360 руб/мес', 'Отключен'];
+			$result = count($stat_arr);
+			$stats = array();
+			$bill_sum = array();
+
+			for ($nom = 0; $nom < $result; array_push($stats, $stat), array_push($bill_sum, $bill), $nom++) {	
+				$stat = array();
+				$stat = $this->Video->find('all', array('conditions' => array('tariff' => $stat_arr[$nom])));
+				$bill = array();
+				$bill = $this->Video->find('all', array('conditions' => array('tariff' => $stat_arr[$nom]), 'fields' => array('sum(Video.bill) AS bill_sum')));
+			}
+			
+			$result_arr = array();
+			foreach ($stats as $stat){
+				$result = count($stat);
+				array_push($result_arr, $result);
+			}
+			
+			$this->set('stats', $result_arr);
+			$this->set('bill', $bill_sum);
+
+		}
+	}
 }
 
 ?>
