@@ -1723,3 +1723,49 @@ Stack Trace:
 #3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2017-04-03 12:33:49 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 114]
+2017-04-03 12:33:49 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 114)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 114, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 114, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 12:34:21 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 114]
+2017-04-03 12:34:21 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 114)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 114, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 114, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 12:47:41 Error: Fatal Error (1): Call to undefined function SUM() in [C:\xampp\htdocs\cake\app\Controller\NetsController.php, line 114]
+2017-04-03 12:47:41 Error: [FatalErrorException] Call to undefined function SUM()
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 114, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 114, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-04-03 12:52:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Model.cost' in 'field list'
+Request URL: /cake/nets/stat
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Net`.`b...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Net`.`b...', Array, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Net`.`b...', false)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Net), Array)
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\app\Controller\NetsController.php(114): Model->find('all', Array)
+#7 [internal function]: NetsController->stat()
+#8 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(NetsController), Array)
+#9 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NetsController), Object(CakeRequest))
+#11 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

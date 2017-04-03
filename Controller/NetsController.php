@@ -93,14 +93,27 @@ class NetsController extends AppController
 			$stat_arr = ['iFlat 390', 'iFlat 490', 'iFlat 590', 'iFlat 690', 'iFlat 790','Отключен'];
 			$result = count($stat_arr);
 			$stats = array();
+			$bill_sum = array();
 
-			for ($nom = 0; $nom < $result; array_push($stats, $stat), $nom++) {	
+			for ($nom = 0; $nom < $result; array_push($stats, $stat), array_push($bill_sum, $bill), $nom++) {	
 				$stat = array();
 				$stat = $this->Net->find('all', array('conditions' => array('tariff' => $stat_arr[$nom])));
+				$bill = array();
+				$bill = $this->Net->find('all', array('conditions' => array('tariff' => $stat_arr[$nom]), 'fields' => array('sum(Net.bill) AS bill_sum')));
 
 			}
+			/*debug($stats);*/
+			/*$this->set('stats', $stats);*/
+			
+			$result_arr = array();
+			foreach ($stats as $stat){
+				$result = count($stat);
+				array_push($result_arr, $result);
 
-			$this->set('stats', $stats);
+			}
+			
+			$this->set('stats', $result_arr);
+			$this->set('bill', $bill_sum);
 
 		}
 	}
