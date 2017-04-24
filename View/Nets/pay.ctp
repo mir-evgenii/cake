@@ -22,8 +22,9 @@ $pay = $nets[0]['Net']['bill'];
     <input type="hidden" name="need-email" value="false">
     <input type="hidden" name="need-phone" value="true">
     <input type="hidden" name="need-address" value="false">
-    <label><input type="radio" name="paymentType" value="PC">Яндекс.Деньгами</label>
+    <label><input type="radio" name="paymentType" value="PC">Яндекс деньгами</label>
     <label><input type="radio" name="paymentType" value="AC">Банковской картой</label>
     <input type="submit" value="Перевести">
 </form>
+
 </div>
