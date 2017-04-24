@@ -2,13 +2,17 @@
 
 <?php echo $this->element('menu') ?>
 
-<div>
 <?php
-echo $this->Form->create('Net');
-echo $this->Form->input('tariff', ['label' => 'Тариф']);
-echo $this->Form->input('bill',  ['label' => 'Счет']);
-echo $this->Form->input('chek',  ['label' => 'Чек']);
-echo $this->Form->input('id');
-echo $this->Form->end('Сохранить');
+if($logged_user['role'] === 'user'){
+		include 'user_edit.ctp';
+		}
+
+if($logged_user['role'] === 'admin'){
+		include 'admin_edit.ctp';
+		}
+
+if($logged_user['role'] === 'account'){
+		include 'account_edit.ctp';
+		}
+		return false;
 ?>
-</div>

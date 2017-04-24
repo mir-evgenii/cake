@@ -51,6 +51,8 @@
  <body>
  <h2>Статистика</h2>
 
-  <div id="air" style="width: 500px; height: 400px; "></div>
-  <div id="air2" style="width: 500px; height: 400px; "></div>
+ <?php echo $this->element('menu') ?>
+
+  <div class="content1" id="air" style="width: 500px; height: 400px; "></div>
+  <div class="content1" id="air2" style="width: 500px; height: 400px; "></div>
  </body>

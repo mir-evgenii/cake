@@ -8,7 +8,7 @@ class NetsController extends AppController
 
 	public function isAuthorized($user = null){
 		if($this->action === 'edit' && $user['role'] === 'user'){
-			return false;
+			return true;
 		}
 		return parent::isAuthorized($user);
 	}
