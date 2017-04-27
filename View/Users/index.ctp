@@ -6,6 +6,7 @@
 <table>
 <tr>
 <th>Id</th>
+<th>Логин</th>
 <th>Имя</th>
 <th>Адрес</th>
 <th>Телефон</th>
@@ -16,6 +17,7 @@
 <tr>
 <td><?= $user['User']['id'] ?></td>
 <td><?= h($user['User']['username']) ?></td>
+<td><?= $user['User']['fio'] ?></td>
 <td><?= $user['User']['address'] ?></td>
 <td><?= $user['User']['phone'] ?></td>
 <td><?= $user['User']['role'] ?></td>

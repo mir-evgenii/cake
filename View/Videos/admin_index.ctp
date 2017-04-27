@@ -16,7 +16,7 @@
 <?php foreach ($videos as $video) : ?>
 <tr>
 <td><?= $video['id'] ?></td>
-<td><?= $video['username'] ?></td>
+<td><?= $video['fio'] ?></td>
 <td><?= $video['phone'] ?></td>
 <td><?= $video['address'] ?></td>
 <td><?= $video['tariff'] ?></td>

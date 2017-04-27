@@ -16,7 +16,7 @@
 <?php foreach ($nets as $net) : ?>
 <tr>
 <td><?= $net['id'] ?></td>
-<td><?= $net['username'] ?></td>
+<td><?= $net['fio'] ?></td>
 <td><?= $net['phone'] ?></td>
 <td><?= $net['address'] ?></td>
 <td><?= $net['tariff'] ?></td>

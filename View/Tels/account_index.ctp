@@ -16,7 +16,7 @@
 <?php foreach ($tels as $tel) : ?>
 <tr>
 <td><?= $tel['id'] ?></td>
-<td><?= $tel['username'] ?></td>
+<td><?= $tel['fio'] ?></td>
 <td><?= $tel['phone'] ?></td>
 <td><?= $tel['address'] ?></td>
 <td><?= $tel['tariff'] ?></td>

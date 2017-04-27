@@ -1,5 +1,5 @@
 <?php if($logged_user): ?>
- <p>Добро пожаловать, <?php echo $logged_user['username'] ?></p>
+ <p>Добро пожаловать, <?php echo $logged_user['fio'] ?></p>
  <p><?php echo $this->Html->link('Выход', '/users/logout') ?></p>
 <?php else: ?>
  <p><?php echo $this->Html->link('Вход', '/users/login') ?></p>

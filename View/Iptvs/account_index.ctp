@@ -16,7 +16,7 @@
 <?php foreach ($iptvs as $iptv) : ?>
 <tr>
 <td><?= $iptv['id'] ?></td>
-<td><?= $iptv['username'] ?></td>
+<td><?= $iptv['fio'] ?></td>
 <td><?= $iptv['phone'] ?></td>
 <td><?= $iptv['address'] ?></td>
 <td><?= $iptv['tariff'] ?></td>
