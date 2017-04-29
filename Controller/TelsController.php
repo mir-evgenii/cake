@@ -4,6 +4,23 @@
 */
 class TelsController extends AppController
 {
+	public $components = array('Paginator');
+
+	public $paginate1 = array(
+        'limit' => 1,
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
+    public $paginate2 = array(
+        'limit' => 1,
+        'conditions' => array('role' => 'user'),
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
 	public $uses = ['Tel', 'User'];
 	
 	public function index()
@@ -16,8 +33,10 @@ class TelsController extends AppController
 		if($user['role'] === 'admin'){
 			/*$this->set('tels', $this->Tel->find('all'));*/
 
-			$tel_arr=($this->Tel->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $tel_arr = $this->Paginator->paginate('Tel');
+			$this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$tels_users = array();
 			for ($nom = 0; $nom < $result; array_push($tels_users, $tel_user), $nom++) {
@@ -30,8 +49,10 @@ class TelsController extends AppController
 		if($user['role'] === 'account'){
 			/*$this->set('tels', $this->Tel->find('all'));*/
 
-			$tel_arr=($this->Tel->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $tel_arr = $this->Paginator->paginate('Tel');
+			$this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$tels_users = array();
 			for ($nom = 0; $nom < $result; array_push($tels_users, $tel_user), $nom++) {

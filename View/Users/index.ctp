@@ -5,12 +5,12 @@
 <div class="content1">
 <table>
 <tr>
-<th>Id</th>
-<th>Логин</th>
-<th>Имя</th>
-<th>Адрес</th>
-<th>Телефон</th>
-<th>Роль</th>
+<th><?php echo $this->Paginator->sort('id'); ?></th>
+<th><?php echo $this->Paginator->sort('username', 'Логин'); ?></th>
+<th><?php echo $this->Paginator->sort('fio', 'Имя'); ?></th>
+<th><?php echo $this->Paginator->sort('address', 'Адрес'); ?></th>
+<th><?php echo $this->Paginator->sort('phone', 'Телефон'); ?></th>
+<th><?php echo $this->Paginator->sort('role', 'Роль'); ?></th>
 <th>Действия</th>
 </tr>
 <?php foreach ($users as $user) : ?>
@@ -25,4 +25,5 @@
 </tr>
 <?php endforeach;?>
 </table>
+<p>&nbsp;<?php echo $this->Paginator->numbers(); ?></p>
 </div>

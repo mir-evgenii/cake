@@ -4,7 +4,7 @@
 
 <table>
 <tr>
-<th>Id</th>
+<th><?php echo $this->Paginator->sort('id'); ?></th>
 <th>Имя</th>
 <th>Телефон</th>
 <th>Адрес</th>
@@ -29,4 +29,5 @@
 <?php else : ?>
 <?php echo $tels; ?>
 <?php endif; ?>
+<p>&nbsp;<?php echo $this->Paginator->numbers(); ?></p>
 </div>

@@ -4,6 +4,16 @@
 */
 class UsersController extends AppController
 {
+	public $components = array('Paginator');
+
+    public $paginate = array(
+        'limit' => 2,
+        'order' => array(
+            'User.id' => 'asc'
+        )
+    );
+
+
 	public $uses = ['Net', 'Tel', 'Video', 'Iptv', 'User'];
 
 	public function isAuthorized($user = null){
@@ -23,7 +33,12 @@ class UsersController extends AppController
 	}
 
 	public function index(){
-		$this->set('users', $this->User->find('all'));
+		/*$this->set('users', $this->User->find('all'));*/
+		$this->Paginator->settings = $this->paginate;
+		$data = $this->Paginator->paginate('User');
+		$this->set('users', $data);
+
+
 	}
 
 	public function add(){

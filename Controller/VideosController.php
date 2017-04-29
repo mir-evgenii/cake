@@ -4,6 +4,23 @@
 */
 class VideosController extends AppController
 {
+	public $components = array('Paginator');
+
+	public $paginate1 = array(
+        'limit' => 1,
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
+    public $paginate2 = array(
+        'limit' => 1,
+        'conditions' => array('role' => 'user'),
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
 	public $uses = ['Video', 'User'];
 	
 	public function index()
@@ -15,9 +32,10 @@ class VideosController extends AppController
 		}
 		if($user['role'] === 'admin'){
 			/*$this->set('videos', $this->Video->find('all'));*/
-
-			$video_arr=($this->Video->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $video_arr = $this->Paginator->paginate('Video');
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$videos_users = array();
 			for ($nom = 0; $nom < $result; array_push($videos_users, $video_user), $nom++) {
@@ -29,9 +47,10 @@ class VideosController extends AppController
 		}
 		if($user['role'] === 'account'){
 			// $this->set('videos', $this->Video->find('all'));
-
-			$video_arr=($this->Video->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $video_arr = $this->Paginator->paginate('Video');
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$videos_users = array();
 			for ($nom = 0; $nom < $result; array_push($videos_users, $video_user), $nom++) {

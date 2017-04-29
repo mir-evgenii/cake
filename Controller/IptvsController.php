@@ -4,6 +4,23 @@
 */
 class IptvsController extends AppController
 {
+	public $components = array('Paginator');
+
+	public $paginate1 = array(
+        'limit' => 1,
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
+    public $paginate2 = array(
+        'limit' => 1,
+        'conditions' => array('role' => 'user'),
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
 	public $uses = ['Iptv', 'User'];
 	
 	public function index()
@@ -16,8 +33,10 @@ class IptvsController extends AppController
 		if($user['role'] === 'admin'){
 			/*$this->set('iptvs', $this->Iptv->find('all'));*/
 
-			$iptv_arr=($this->Iptv->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $iptv_arr = $this->Paginator->paginate('Iptv');
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$iptvs_users = array();
 			for ($nom = 0; $nom < $result; array_push($iptvs_users, $iptv_user), $nom++) {
@@ -30,8 +49,10 @@ class IptvsController extends AppController
 		if($user['role'] === 'account'){
 			/*$this->set('iptvs', $this->Iptv->find('all'));*/
 
-			$iptv_arr=($this->Iptv->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $iptv_arr = $this->Paginator->paginate('Iptv');
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$iptvs_users = array();
 			for ($nom = 0; $nom < $result; array_push($iptvs_users, $iptv_user), $nom++) {

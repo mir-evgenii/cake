@@ -4,6 +4,23 @@
 */
 class NetsController extends AppController
 {
+	public $components = array('Paginator');
+
+	public $paginate1 = array(
+        'limit' => 1,
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
+    public $paginate2 = array(
+        'limit' => 1,
+        'conditions' => array('role' => 'user'),
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
 	public $uses = ['Net', 'User'];
 
 	public function isAuthorized($user = null){
@@ -23,8 +40,12 @@ class NetsController extends AppController
 		if($user['role'] === 'admin'){
 			/*$this->set('nets', $this->Net->find('all'));
 			$this->set('users', $this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
-			$net_arr=($this->Net->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			/*$net_arr=($this->Net->find('all'));*/
+			$this->Paginator->settings = $this->paginate1;
+		    $net_arr = $this->Paginator->paginate('Net');
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
+			/*$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
 			$result = count($user_arr);
 			$nets_users = array();
 			for ($nom = 0; $nom < $result; array_push($nets_users, $net_user), $nom++) {
@@ -32,6 +53,8 @@ class NetsController extends AppController
 				$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
 			}
 			/*$nets_users1 = array_diff($nets_users, array(''));*/
+
+			
 			$this->set('nets', $nets_users);
 			/*$result = count($user_arr);
 			debug($result);
@@ -44,8 +67,10 @@ class NetsController extends AppController
 
 		}
 		if($user['role'] === 'account'){
-			$net_arr=($this->Net->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			$this->Paginator->settings = $this->paginate1;
+		    $net_arr = $this->Paginator->paginate('Net');
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
 			$result = count($user_arr);
 			$nets_users = array();
 			for ($nom = 0; $nom < $result; array_push($nets_users, $net_user), $nom++) {
