@@ -32,10 +32,19 @@ class UsersController extends AppController
 
 	}
 
-	public function index(){
+	public function index($search = null){
 		/*$this->set('users', $this->User->find('all'));*/
-		$this->Paginator->settings = $this->paginate;
-		$data = $this->Paginator->paginate('User');
+		/*$search = 'А';*/
+		if (isset($search)){
+			$search1 = $search.'%';
+			$data = $this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+		}else{
+			$this->Paginator->settings = $this->paginate;
+			$data = $this->Paginator->paginate('User');
+		}
+		
+		/*$this->Paginator->settings = $this->paginate;
+		$data = $this->Paginator->paginate('User');*/
 		$this->set('users', $data);
 
 

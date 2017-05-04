@@ -1,6 +1,5 @@
 <h2>Интернет</h2>
 
-
 <?php echo $this->element('menu') ?>
 
 <?php

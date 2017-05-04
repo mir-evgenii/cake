@@ -5,6 +5,8 @@
  <p><?php echo $this->Html->link('Вход', '/users/login') ?></p>
 <?php endif; ?>
 
+
+
 <?php 
 if($logged_user['role'] === 'user'){
 		include 'user_menu.ctp';
