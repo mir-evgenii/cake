@@ -23,7 +23,7 @@ class TelsController extends AppController
 
 	public $uses = ['Tel', 'User'];
 	
-	public function index()
+	public function index($search = null)
 	{
 		$user=$this->Auth->user();
 		
@@ -31,12 +31,18 @@ class TelsController extends AppController
 			$this->set('tels', $this->Tel->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
 		}
 		if($user['role'] === 'admin'){
-			/*$this->set('tels', $this->Tel->find('all'));*/
-
+		if (isset($search)){
+			$search1 = $search.'%';
+			$this->Paginator->settings = $this->paginate2;
+			$user_arr =$this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+			$this->Paginator->settings = $this->paginate1;
+		    $tel_arr = $this->Paginator->paginate('Tel', array('Tel.id LIKE' => $user_arr[0]['User']['id']));
+		}else{
 			$this->Paginator->settings = $this->paginate1;
 		    $tel_arr = $this->Paginator->paginate('Tel');
 			$this->Paginator->settings = $this->paginate2;
 		    $user_arr = $this->Paginator->paginate('User');
+		}
 			$result = count($user_arr);
 			$tels_users = array();
 			for ($nom = 0; $nom < $result; array_push($tels_users, $tel_user), $nom++) {
@@ -47,12 +53,18 @@ class TelsController extends AppController
 			$this->set('tels', $tels_users);
 		}
 		if($user['role'] === 'account'){
-			/*$this->set('tels', $this->Tel->find('all'));*/
-
+		if (isset($search)){
+			$search1 = $search.'%';
+			$this->Paginator->settings = $this->paginate2;
+			$user_arr =$this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+			$this->Paginator->settings = $this->paginate1;
+		    $tel_arr = $this->Paginator->paginate('Tel', array('Tel.id LIKE' => $user_arr[0]['User']['id']));
+		}else{
 			$this->Paginator->settings = $this->paginate1;
 		    $tel_arr = $this->Paginator->paginate('Tel');
 			$this->Paginator->settings = $this->paginate2;
 		    $user_arr = $this->Paginator->paginate('User');
+		}
 			$result = count($user_arr);
 			$tels_users = array();
 			for ($nom = 0; $nom < $result; array_push($tels_users, $tel_user), $nom++) {

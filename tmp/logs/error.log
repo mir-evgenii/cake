@@ -2445,3 +2445,67 @@ Stack Trace:
 #3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2017-05-04 22:38:52 Error: [MissingActionException] Action UsersController::Ал() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'Ал',
+)
+Request URL: /cake/users/%D0%90%D0%BB
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-05-07 12:56:59 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /cake/index/%D0%90%D0%BB
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-05-07 12:57:24 Error: [NotFoundException] Not Found
+Request URL: /cake/nets/index/%D0%90%D0%BB/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\NetsController.php(46): PaginatorComponent->paginate('User', Array)
+#1 [internal function]: NetsController->index('\xD0\x90\xD0\xBB')
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(NetsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NetsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-05-07 13:59:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Net.id' in 'where clause'
+Request URL: /cake/tels/index/%D0%90%D0%BB
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Tel`.`i...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Tel`.`i...', Array, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Tel`.`i...', false)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Tel), Array)
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\cake\app\Controller\TelsController.php(39): PaginatorComponent->paginate('Tel', Array)
+#8 [internal function]: TelsController->index('\xD0\x90\xD0\xBB')
+#9 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TelsController), Array)
+#10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TelsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2017-05-07 13:59:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Net.id' in 'where clause'
+Request URL: /cake/tels/index/%D0%90%D0%BB
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Tel`.`i...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Tel`.`i...', Array, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Tel`.`i...', false)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Tel), Array)
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\cake\app\Controller\TelsController.php(39): PaginatorComponent->paginate('Tel', Array)
+#8 [internal function]: TelsController->index('\xD0\x90\xD0\xBB')
+#9 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(TelsController), Array)
+#10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TelsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

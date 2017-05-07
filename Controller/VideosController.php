@@ -23,7 +23,7 @@ class VideosController extends AppController
 
 	public $uses = ['Video', 'User'];
 	
-	public function index()
+	public function index($search = null)
 	{
 		$user=$this->Auth->user();
 		
@@ -31,33 +31,43 @@ class VideosController extends AppController
 			$this->set('videos', $this->Video->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
 		}
 		if($user['role'] === 'admin'){
-			/*$this->set('videos', $this->Video->find('all'));*/
+		if (isset($search)){
+			$search1 = $search.'%';
+			$this->Paginator->settings = $this->paginate2;
+			$user_arr =$this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+			$this->Paginator->settings = $this->paginate1;
+		    $video_arr = $this->Paginator->paginate('Video', array('Video.id LIKE' => $user_arr[0]['User']['id']));
+		}else{
 			$this->Paginator->settings = $this->paginate1;
 		    $video_arr = $this->Paginator->paginate('Video');
 		    $this->Paginator->settings = $this->paginate2;
 		    $user_arr = $this->Paginator->paginate('User');
+		}
 			$result = count($user_arr);
 			$videos_users = array();
 			for ($nom = 0; $nom < $result; array_push($videos_users, $video_user), $nom++) {
-				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$video_user=($video_arr[$nom]['Video'])+($user_arr[$nom]['User']);
 			}
-			/*$videos_users1 = array_diff($videos_users, array(''));*/
 			$this->set('videos', $videos_users);
 		}
 		if($user['role'] === 'account'){
-			// $this->set('videos', $this->Video->find('all'));
+		if (isset($search)){
+			$search1 = $search.'%';
+			$this->Paginator->settings = $this->paginate2;
+			$user_arr =$this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+			$this->Paginator->settings = $this->paginate1;
+		    $video_arr = $this->Paginator->paginate('Video', array('Video.id LIKE' => $user_arr[0]['User']['id']));
+		}else{
 			$this->Paginator->settings = $this->paginate1;
 		    $video_arr = $this->Paginator->paginate('Video');
 		    $this->Paginator->settings = $this->paginate2;
 		    $user_arr = $this->Paginator->paginate('User');
+		}
 			$result = count($user_arr);
 			$videos_users = array();
 			for ($nom = 0; $nom < $result; array_push($videos_users, $video_user), $nom++) {
-				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$video_user=($video_arr[$nom]['Video'])+($user_arr[$nom]['User']);
 			}
-			/*$videos_users1 = array_diff($videos_users, array(''));*/
 			$this->set('videos', $videos_users);
 		}
 	}

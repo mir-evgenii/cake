@@ -30,7 +30,7 @@ class NetsController extends AppController
 		return parent::isAuthorized($user);
 	}
 	
-	public function index()
+	public function index($search = null)
 	{
 		$user=$this->Auth->user();
 		
@@ -38,39 +38,38 @@ class NetsController extends AppController
 			$this->set('nets', $this->Net->find('all', array('conditions' => array('id' => $this->Auth->user('id')))));
 		}
 		if($user['role'] === 'admin'){
-			/*$this->set('nets', $this->Net->find('all'));
-			$this->set('users', $this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
-			/*$net_arr=($this->Net->find('all'));*/
+		if (isset($search)){
+			$search1 = $search.'%';
+			$this->Paginator->settings = $this->paginate2;
+			$user_arr =$this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+			$this->Paginator->settings = $this->paginate1;
+		    $net_arr = $this->Paginator->paginate('Net', array('Net.id LIKE' => $user_arr[0]['User']['id']));
+		}else{
 			$this->Paginator->settings = $this->paginate1;
 		    $net_arr = $this->Paginator->paginate('Net');
 		    $this->Paginator->settings = $this->paginate2;
 		    $user_arr = $this->Paginator->paginate('User');
-			/*$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
+		}
 			$result = count($user_arr);
 			$nets_users = array();
 			for ($nom = 0; $nom < $result; array_push($nets_users, $net_user), $nom++) {
-				/*$net_user = array_merge($net_arr[$nom]['Net'], $user_arr[$nom]['User']);*/
 				$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
 			}
-			/*$nets_users1 = array_diff($nets_users, array(''));*/
-
-			
 			$this->set('nets', $nets_users);
-			/*$result = count($user_arr);
-			debug($result);
-			$nom=0;
-			debug($net_arr[$nom]['Net']);
-			debug($user_arr[$nom]['User']);
-
-			$net_user=($net_arr[$nom]['Net'])+($user_arr[$nom]['User']);
-			debug($net_user);*/
-
 		}
 		if($user['role'] === 'account'){
+		if (isset($search)){
+			$search1 = $search.'%';
+			$this->Paginator->settings = $this->paginate2;
+			$user_arr =$this->Paginator->paginate('User', array('User.fio LIKE' => $search1));
+			$this->Paginator->settings = $this->paginate1;
+		    $net_arr = $this->Paginator->paginate('Net', array('Net.id LIKE' => $user_arr[0]['User']['id']));
+		}else{
 			$this->Paginator->settings = $this->paginate1;
 		    $net_arr = $this->Paginator->paginate('Net');
 		    $this->Paginator->settings = $this->paginate2;
 		    $user_arr = $this->Paginator->paginate('User');
+		}
 			$result = count($user_arr);
 			$nets_users = array();
 			for ($nom = 0; $nom < $result; array_push($nets_users, $net_user), $nom++) {
