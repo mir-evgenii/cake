@@ -7,7 +7,7 @@ class UsersController extends AppController
 	public $components = array('Paginator');
 
     public $paginate = array(
-        'limit' => 2,
+        'limit' => 10,
         'order' => array(
             'User.id' => 'asc'
         )

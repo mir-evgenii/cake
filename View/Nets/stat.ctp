@@ -1,4 +1,3 @@
-
 <head>
   <meta charset="utf-8">
 
@@ -38,8 +37,7 @@
      ['iFlat 490',     <?= $bill[1][0][0]['bill_sum'] ?>],
      ['iFlat 590',     <?= $bill[2][0][0]['bill_sum'] ?>],
      ['iFlat 690',     <?= $bill[3][0][0]['bill_sum'] ?>],
-     ['iFlat 790',     <?= $bill[4][0][0]['bill_sum'] ?>],
-     ['Отключен',     <?= $bill[5][0][0]['bill_sum'] ?>]
+     ['iFlat 790',     <?= $bill[4][0][0]['bill_sum'] ?>]
     ]);
     var options = {
      title: 'Статистика оплаты тарифов',

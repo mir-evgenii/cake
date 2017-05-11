@@ -1,7 +1,6 @@
 <div class="actions">
 <ul>
-<li><a href="/cake">Главная</a></li>
-<li><?php echo $this->Html->link('Поиск', ['controller' => 'searchs', 'action' => 'index']) ?></li>
+
 <li><?php echo $this->Html->link('Интернет', ['controller' => 'nets', 'action' => 'index']) ?></li>
 <li><?php echo $this->Html->link('Статистика интернета', ['controller' => 'nets', 'action' => 'stat']) ?></li>
 

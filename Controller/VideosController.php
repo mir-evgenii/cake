@@ -7,14 +7,14 @@ class VideosController extends AppController
 	public $components = array('Paginator');
 
 	public $paginate1 = array(
-        'limit' => 1,
+        'limit' => 10,
         'order' => array(
             'Net.id' => 'asc'
         )
     );
 
     public $paginate2 = array(
-        'limit' => 1,
+        'limit' => 10,
         'conditions' => array('role' => 'user'),
         'order' => array(
             'Net.id' => 'asc'

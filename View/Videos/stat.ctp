@@ -30,8 +30,7 @@
    function drawChart() {
     var data = google.visualization.arrayToDataTable([
      ['Тариф', 'Кол-во пользователей'],
-     ['360 руб/мес',     <?= $bill[0][0][0]['bill_sum'] ?>],
-     ['Отключен',     <?= $bill[1][0][0]['bill_sum'] ?>]
+     ['360 руб/мес',     <?= $bill[0][0][0]['bill_sum'] ?>]
     ]);
     var options = {
      title: 'Статистика оплаты тарифов',
