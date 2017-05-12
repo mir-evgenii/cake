@@ -2509,3 +2509,110 @@ Stack Trace:
 #11 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(TelsController), Object(CakeRequest))
 #12 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2017-05-12 08:50:00 Error: Fatal Error (4): syntax error, unexpected '$user_id' (T_VARIABLE) in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 18]
+2017-05-12 08:50:00 Error: [FatalErrorException] syntax error, unexpected '$user_id' (T_VARIABLE)
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-12 08:52:51 Error: Fatal Error (4): syntax error, unexpected '$user_id' (T_VARIABLE) in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 18]
+2017-05-12 08:52:51 Error: [FatalErrorException] syntax error, unexpected '$user_id' (T_VARIABLE)
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 18)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 18, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 18, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-12 09:27:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role' in 'where clause'
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Bid`.`i...', Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(668): DboSource->execute('SELECT `Bid`.`i...', Array, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Model\Datasource\DboSource.php(1106): DboSource->fetchAll('SELECT `Bid`.`i...', false)
+#4 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(3022): DboSource->read(Object(Bid), Array)
+#5 C:\xampp\htdocs\cake\lib\Cake\Model\Model.php(2994): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\cake\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#7 C:\xampp\htdocs\cake\app\Controller\BidsController.php(126): PaginatorComponent->paginate('Bid', Array)
+#8 [internal function]: BidsController->index()
+#9 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#10 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#12 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2017-05-12 09:30:48 Error: Fatal Error (4): syntax error, unexpected '$bid_arr1' (T_VARIABLE) in [C:\xampp\htdocs\cake\app\Controller\BidsController.php, line 127]
+2017-05-12 09:30:48 Error: [FatalErrorException] syntax error, unexpected '$bid_arr1' (T_VARIABLE)
+Request URL: /cake/bids
+Stack Trace:
+#0 C:\xampp\htdocs\cake\lib\Cake\Error\ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 127)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 127, Array)
+#2 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 127, Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-05-12 09:31:04 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-05-12 09:31:15 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-05-12 09:31:23 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:4
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-05-12 09:33:08 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-05-12 09:33:58 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2017-05-12 09:35:04 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

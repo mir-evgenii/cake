@@ -25,7 +25,9 @@
 </tr>
 <?php endforeach;?>
 </table>
+<p>&nbsp;<?php echo $this->Paginator->numbers(); ?></p>
 <?php else : ?>
 <?php echo $bids; ?>
 <?php endif; ?>
+
 </div>

@@ -5,6 +5,24 @@
 class BidsController extends AppController
 {
 	public $uses = ['Bid', 'User'];
+	public $components = array('Paginator');
+
+	public $paginate1 = array(
+        'limit' => 10,
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
+    public $paginate2 = array(
+        'limit' => 10,
+        // 'conditions' => array('role' => 'user'),
+        'order' => array(
+            'Net.id' => 'asc'
+        )
+    );
+
+	
 
 	/*public function isAuthorized($user = null){
 		if($this->action === 'add'){
@@ -92,16 +110,21 @@ class BidsController extends AppController
 		}
 
 		if($user['role'] === 'admin'){
-			
-			$bid_arr=($this->Bid->find('all'));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			/*$this->Paginator->settings = $this->paginate1;
+		    $bid_arr = $this->Paginator->paginate('Bid');*/
+		    $this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User');
+			/*$bid_arr=($this->Bid->find('all'));
+			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
 			$result = count($user_arr);
 			$bids_users = array();
 
 			for ($nom = 0; $nom <= $result; array_push($bids_users, $bid_user), $nom++) {
 
-				$user_id = $user_arr[$nom]['User']['id'];
-				$bid_arr1=($this->Bid->find('all',  array('conditions' => array('user_id' => $user_id))));
+				// $user_id = $user_arr[$nom]['User']['id'];
+				// $bid_arr1=($this->Bid->find('all',  array('conditions' => array('user_id' => $user_id))));
+				$this->Paginator->settings = $this->paginate1;
+				$bid_arr1 = $this->Paginator->paginate('Bid', array('Bid.user_id LIKE' => $user_arr[$nom]['User']['id']));
 				$res = count($bid_arr1);
 
 				$bid_user = $arrs;
