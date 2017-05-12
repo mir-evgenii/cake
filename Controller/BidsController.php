@@ -16,7 +16,7 @@ class BidsController extends AppController
 
     public $paginate2 = array(
         'limit' => 10,
-        // 'conditions' => array('role' => 'user'),
+        'conditions' => array('role' => 'user'),
         'order' => array(
             'Net.id' => 'asc'
         )
@@ -74,8 +74,13 @@ class BidsController extends AppController
 			/*$data = $this->Bid->find('all', array('conditions' => array('status' => 'Не выполнено')));
 			$this->set('bids', $data);*/
 
-			$bid_arr=($this->Bid->find('all', array('conditions' => array('status' => 'Не выполнено'))));
-			$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));
+			/*$bid_arr=($this->Bid->find('all', array('conditions' => array('status' => 'Не выполнено'))));*/
+			$this->Paginator->settings = $this->paginate1;
+			$bid_arr = $this->Paginator->paginate('Bid', array('Bid.status LIKE' => 'Не выполнено'));
+			/*$user_arr=($this->User->find('all',  array('conditions' => array('role' => 'user'))));*/
+			$this->Paginator->settings = $this->paginate2;
+		    $user_arr = $this->Paginator->paginate('User', array('User.role LIKE' => 'user'));
+
 			$result = count($user_arr);
 			$bids_users = array();
 

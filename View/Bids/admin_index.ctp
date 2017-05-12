@@ -29,5 +29,4 @@
 <?php else : ?>
 <?php echo $bids; ?>
 <?php endif; ?>
-
 </div>

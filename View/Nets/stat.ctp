@@ -51,7 +51,7 @@
 
  </head>
  <body>
- <h2>Статистика</h2>
+ <h2>Статистика интернета</h2>
 
  <?php echo $this->element('menu') ?>
 

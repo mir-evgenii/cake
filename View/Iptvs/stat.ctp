@@ -48,7 +48,7 @@
 
  </head>
  <body>
- <h2>Статистика</h2>
+ <h2>Статистика IP TV</h2>
 
  <?php echo $this->element('menu') ?>
 

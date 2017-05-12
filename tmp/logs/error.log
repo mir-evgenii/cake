@@ -2616,3 +2616,13 @@ Stack Trace:
 #4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
 #5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2017-05-12 10:29:55 Error: [NotFoundException] Not Found
+Request URL: /cake/bids/index/page:2
+Stack Trace:
+#0 C:\xampp\htdocs\cake\app\Controller\BidsController.php(127): PaginatorComponent->paginate('Bid', Array)
+#1 [internal function]: BidsController->index()
+#2 C:\xampp\htdocs\cake\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BidsController), Array)
+#3 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\htdocs\cake\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(BidsController), Object(CakeRequest))
+#5 C:\xampp\htdocs\cake\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
